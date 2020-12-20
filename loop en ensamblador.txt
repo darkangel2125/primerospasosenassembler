@@ -1,0 +1,17 @@
+Instruccion LOOP: este es un ciclo repetitivo que ya explique en listas, pero la volveremos a ver, para indicar que numero de veces queremos que se repita una accion almacenamos un valor en CX, todo lo que este dentro de la etiqueta loop se repetira
+por ejemplo si hacemos un MOV cx,5 las acciones se repetiran con cx=5, CX=4, CX=3, CX=2, CX=1
+
+Ejemplo: imprimir 5 veces "debo hacer la tarea"
+
+include 'emu8086.inc'
+org 100h
+
+mov cx,5
+
+ repetir:   
+ printn 'debo hacer la tarea' 
+ loop repetir   
+
+ret
+
+[center][img]https://i.ibb.co/GMTT629/instruccionloop.jpg[/img][/center]
